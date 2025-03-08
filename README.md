@@ -1,7 +1,7 @@
-##
+## Quasi dynamic flow whit time series
 ## Theoretical Framework
 
-### Power Flow in Electrical Systems
+### Power Flow in Electrical Systems 
 
 **Description:** Power systems constitute the fundamental infrastructure for the generation, transmission, and distribution of electrical energy. Power flow analysis determines the steady-state electrical condition of a network.
 
@@ -79,10 +79,10 @@
   - **Algorithm Convergence:** The convergence capability of power flow methods may be reduced
   - **Optimal Operation:** Requires considering the variability and uncertainty of solar generation
 
-##
+## Flujo quasi dinamico con series de tiempo
 ## Marco Teórico
 
-### Flujo de Potencia en Sistemas Eléctricos
+### Flujo de Potencia en Sistemas Eléctricos 
 
 **Descripción:** Los sistemas de potencia eléctrica constituyen la infraestructura fundamental para la generación, transmisión y distribución de energía eléctrica. El análisis de flujo de potencia determina el estado eléctrico en régimen permanente de una red.
 
