@@ -334,16 +334,16 @@ function main() # Función principal
     ##___________________________________________________________________________
     # Calcular la potencia neta para cada minuto y ejecutar el flujo de potencia
     voltajes_por_minuto = [] # Vector vacío
-    #for minuto in 1:1440 # Se recorre cada minuto
-    #    if minuto <= length(demandas) && minuto <= length(datos_interpolados) # Si el minuto está dentro de los límites
-    #        sn_nuevo = calcular_potencia_neta2(nod, demandas[minuto], datos_interpolados[minuto]) # Se calcula la potencia neta
-    #        vn, vs, errores, ite = flujo_punto_fijo(ynn, yns, sn_nuevo, vn, vs) # Se ejecuta el flujo de potencia
-    #        push!(voltajes_por_minuto, vn) # Se almacena el vector de voltajes
-    #        println("Voltajes en minuto $minuto: $vn") # Se imprime el vector de voltajes
-    #    else
-    #        println("Índice fuera de los límites: $minuto") # Mensaje de depuración
-    #    end
-    #end
-    #return nothing
+    for minuto in 1:1440 # Se recorre cada minuto
+        if minuto <= length(demandas) && minuto <= length(datos_interpolados) # Si el minuto está dentro de los límites
+            sn_nuevo = calcular_potencia_neta2(nod, demandas[minuto], datos_interpolados[minuto]) # Se calcula la potencia neta
+            vn, vs, errores, ite = flujo_punto_fijo(ynn, yns, sn_nuevo, vn, vs) # Se ejecuta el flujo de potencia
+            push!(voltajes_por_minuto, vn) # Se almacena el vector de voltajes
+            println("Voltajes en minuto $minuto: $vn") # Se imprime el vector de voltajes
+        else
+            println("Índice fuera de los límites: $minuto") # Mensaje de depuración
+        end
+    end
+    return nothing
 end
 main()
